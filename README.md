@@ -231,17 +231,3 @@ java -cp bin despues.MainDespues
 
 ---
 
-## 👨‍🏫 Guion Sugerido para Explicar en Clase
-
-1. **Introducción del Problema (Caso Antes):**
-   - Muestra `MainAntes.java`. Pregunta a los estudiantes: *"¿Qué pasa si mi jefe me pide exportar a formato Excel y agregar un reporte de Recursos Humanos?"*
-   - Explica el concepto de **explosión de clases**: la herencia multiplica las clases ($M \times N$).
-
-2. **La Solución (El Puente):**
-   - Abre `despues/reporte/Reporte.java`. Señala el atributo `protected FormatoReporte formato;`. **Ese es el puente.**
-   - Explica el principio: *"Favorecer la composición sobre la herencia"*.
-
-3. **Demostración en Vivo:**
-   - Ejecuta `MainDespues.java`.
-   - Muestra cómo `ReporteVentas` se imprime en PDF, luego con una sola línea (`setFormato(html)`) cambia a HTML en tiempo de ejecución.
-   - Resalta que `FormatoJSON` se creó una sola vez y sirvió para cualquier reporte sin tocar una sola línea de `ReporteVentas` ni `ReporteFinanciero`.
